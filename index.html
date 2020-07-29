@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="src/style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Local Storage and Cookies</title>
+</head>
+
+<body>
+  <div class="wrapper-settings">
+    <div class="settings">
+      <h1>How your preference should be saved?</h1>
+      <label>Local Storage
+        <input type="radio" id="local-storage-data" checked="checked" name="preferance-radio" value="local-storage">
+      </label>
+      <label>Cookie
+        <input type="radio" id="cookie-data" name="preferance-radio" value="Cookie">
+      </label>
+    </div>
+    <div class="clear-button">
+      <button onclick="clearPreferance()"><i class="fas fa-broom"></i>Clear</button>
+    </div>
+  </div>
+  <div class="wrapper-content">
+    <label>Select City:</label>
+    <select>
+        <option value="Cluj-Napoca">Cluj-Napoca</option>
+        <option value="Oradea">Oradea</option>
+        <option value="Bucuresti">Bucuresti</option>
+        <option value="Brasov">Brasov</option>
+        <option value="Orastie">Orastie</option>
+        <option value="Deva">Deva</option>
+        <option value="Timisoara">Timisoara</option>
+        <option value="Constanta">Constanta</option>
+        <option value="Iasi">Iasi</option>
+        <option value="Paris">Paris</option>
+        <option value="London">London</option>
+    </select>
+    <h2>How do you want to see the weather:</h2>
+    <div class="content">
+      <div class="main-content">
+        <label>Celsius
+          <input type="radio" id="celsiusRadio" checked="checked" name="radio" value="Celsius">
+        </label>
+        <label>Fahrenheit
+          <input type="radio" id="fahrenheitRadio" name="radio" value="Fahrenheit">
+        </label>
+        <button onclick="getWeather()">Get weather</button>
+      </div>
+      <aside>
+      </aside>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="src/apiCalls.js"></script>
+  <script type="text/javascript" src="src/script.js"></script>
+</body>
+
+</html>
